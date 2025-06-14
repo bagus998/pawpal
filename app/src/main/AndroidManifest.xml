@@ -2,18 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/nav_home"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/cat_black"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pawpal"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="com.litegral.pawpal.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +25,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name="com.litegral.pawpal.activities.AdopterSubmitRequestActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name="com.litegral.pawpal.activities.AdopterRequestConfirmationActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name="com.litegral.pawpal.activities.AdopterTrackRequestActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name="com.litegral.pawpal.activities.AdoptionRequestsActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name="com.litegral.pawpal.activities.OwnerAdoptionRequestsActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name="com.litegral.pawpal.activities.PetAdoptionRequestsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
